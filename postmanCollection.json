@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "500f60ff-fa92-45b4-893e-a230c037241e",
+		"name": "NodeTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Clear-Site-Data",
+						"value": "cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/address",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find one",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Clear-Site-Data",
+						"value": "cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/address/612259f3cecb7689f4f2df5c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address",
+						"612259f3cecb7689f4f2df5c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"country\": \"NL\",\n    \"city\": \"Heemstede\",\n    \"street\": \"Leidsevaartweg\",\n    \"postalcode\": \"02106\",\n    \"number\": 99,\n    \"numberAddition\": \"\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/address",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update address",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"not interested\",\n    \"name\": \"name\",\n    \"email\": \"email@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/address/612259f3cecb7689f4f2df5c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address",
+						"612259f3cecb7689f4f2df5c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete address",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/address/612259f3cecb7689f4f2df5c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"address",
+						"612259f3cecb7689f4f2df5c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
